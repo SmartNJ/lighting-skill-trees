@@ -1,8 +1,10 @@
-以下是我学习 《Thinking in java》第 21 章《并发》的一些总结，以问答的形式记录下来。
+​		
 
+# Concurrency
 
+相关链接：
 
-参考并学习了[《JAVA多线程和并发基础面试问答》](http://ifeve.com/java-multi-threading-concurrency-interview-questions-with-answers/)
+[《JAVA多线程和并发基础面试问答》](http://ifeve.com/java-multi-threading-concurrency-interview-questions-with-answers/)
 
 
 
@@ -50,8 +52,6 @@ String outputs = manager.submit(
 
 System.out.println(outputs);
 ```
-
-
 
 
 
@@ -171,8 +171,6 @@ public interface Future<V> {
 
 
 
-
-
 - 如果没有 Callable、Future和FutureTask ，我们要获取执行结果，就必须怎么做？
   - 就必须共享变量或者使用线程通信的方式来达到效果。
 
@@ -190,13 +188,6 @@ public interface Future<V> {
 
 
 
-
-
-
-# 共享受限资源
-
-
-
 解决共享资源竞争
 
 - 并发模式下解决线程冲突问题采用什么方案？
@@ -210,6 +201,8 @@ synchronized
 
 - 解释一下 synchronized 执行流程。
   - 检查锁是否可用，然后获取锁，执行代码，释放锁。
+
+
 
 
 
@@ -255,7 +248,7 @@ synchronized
 
   - 为了获得最佳速度，允许线程保存共享成员变量的私有拷贝，而且只当线程进入或者离开同步代码块时才与共享成员变量的原始值对比。这样当多个线程同时与某个对象交互时，就必须要注意到要让线程及时的得到共享成员变量的变化。而volatile关键字就是提示JVM：对于这个成员变量不能保存它的私有拷贝，而应直接与共享成员变量交互。 因此当要访问的变量已在synchronized代码块中（因为线程进入或离开同步代码块时会更新共享变量的值），或者为常量时，不必再使用volatile。由于使用volatile屏蔽掉了JVM中必要的代码优化，所以在效率上比较低。
 
-  ​
+
 
 
 
@@ -344,8 +337,6 @@ synchronized
 
 
 
-先定义的内部类，无法访问到后定义的内部类。
 
+ [⬆️](#Concurrency)
 
-
-Collections对象有许多同步的集合类，比如SynchronizedList。
