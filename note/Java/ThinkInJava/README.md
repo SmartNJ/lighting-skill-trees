@@ -34,7 +34,7 @@
 
 ### 第12章 通过异常处理错误
 
-
+- [ ] [异常知识点总结](exceptions/ErrorHandlingwithExceptions.md)
 
 ### 第13章 字符串
 

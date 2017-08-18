@@ -192,7 +192,7 @@
 
 
 
-**《Think in Java》**  [读书笔记](note/Java/Think in Java/README.md)      :star:
+**《Think in Java》**  [读书笔记](note/Java/ThinkInJava/README.md)      :star:
 
 
 
